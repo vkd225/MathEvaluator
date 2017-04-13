@@ -1,5 +1,5 @@
 import wolframalpha
-app_id = 'QV3GGU-PJ6EREKR5P'
+app_id = 'Your App Id'
 client = wolframalpha.Client(app_id)
 
 res = client.query('')
