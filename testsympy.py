@@ -7,37 +7,51 @@ transformations = (standard_transformations + (implicit_multiplication_applicati
 import math
 
 
-def user_input(exp):
- 	exp = raw_input('Enter User Input: ')
- 	exp = parse_expr(exp, transformations = transformations)
- 	print exp
- 	return exp
+# def user_input(exp):
+#  	exp = raw_input('Enter User Input: ')
+#  	exp = parse_expr(exp, transformations = transformations)
+#  	print exp
+#  	return exp
 
 
-def step_input(exp):
-	exp = raw_input('Enter Step Output: ')
-	exp = parse_expr(exp, transformations = transformations)
-	print exp
-	return exp
+# def step_input(exp):
+# 	exp = raw_input('Enter Step Output: ')
+# 	exp = parse_expr(exp, transformations = transformations)
+# 	print exp
+# 	return exp
 
-def check():
-	user = user_input(exp)
-	step = step_input(exp)
-	return (simplify (user - step) == 0)
+# def check():
+# 	user = user_input(exp)
+# 	step = step_input(exp)
+# 	return (simplify (user - step) == 0)
 
 
-out = check()
+# out = check()
+# print out 
+
+
+user_input = parse_expr('a+b', transformations = transformations)
+step_input = parse_expr('a', transformations = transformations)
+
+def check(user_input, step_input):
+	return (simplify (user_input - step_input) == 0)
+
+
+out = check(user_input, step_input)
 print out 
+
+
+
 
 # print math.sin 90
 
 
-aa= parse_expr("2x", transformations = transformations)
-# print aa
-
-print math.sin(math.radians(90))
+# print math.sin(math.radians(90))
 
 
-# ver1 = sin(x)**2 + cos(x)**2
-# ver2 = 1
-# print simplify(ver1-ver2) == 0
+
+
+
+#p rint ((a+b)**2).__eval()__ 
+
+# .__eq__(b**2+a**2+2*a*b)
