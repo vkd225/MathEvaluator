@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>Step Evaluator</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet"> 
+</head>
+
+
 <body>
-    <h1>Enter Steps to be evaluated</h1>
-    
-    <form action="." method="POST">
-        <input type="text" name="step_input" placeholder="Step Input">
-        
-        <input type="text" name="user_input" placeholder="User Input">
+	<div class="container">
+		<div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                   
+                </ul>
+            </nav>
+            <h3 class="text-muted">Step Evaluator</h3>
+        </div>
 
-    	<input type="submit" name="text" value="Send">
-    </form>
+        <div class="jumbotron-narrow">
 
+		    <h1>Enter Steps to be evaluated</h1>
+		    <form action="." method="POST">
+		        <input type="text" name="step_input" placeholder="Step Input">
+		        
+		        <input type="text" name="user_input" placeholder="User Input">
+
+		    	<input type="submit" name="text" value="Submit">
+		    </form>
+
+			<footer class="footer">
+	            <p>&copy; Tricon Infotech LLC</p>
+	        </footer>
+
+	    </div>
+    </div>
 
 
 </body>

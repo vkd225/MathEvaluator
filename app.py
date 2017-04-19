@@ -18,7 +18,7 @@ def main():
 def step_evaluate():
 	return render_template ('step_evaluate.html')
 
-@app.route('/', methods = ['POST'])
+@app.route('/', methods = ['GET','POST'])
 def step_evaluate_post():
 
 	# def user_input(exp):
@@ -48,14 +48,15 @@ def step_evaluate_post():
 	out = check(user_input, step_input)
 	
 	if (out == True):
-		#filename = 'success.jpg'
-		return 'Success'
+		filename = 'success.jpg'
+		# return 'Success'
 	else:
-		# filename = 'fail.jpg'
-		return 'fail'
+		filename = 'fail.jpg'
+		#return 'fail'
 	
-	return send_file(filename, mimetype = 'image/jpeg')
-
+	# return filename
+	# return send_file(filename, mimetype = 'image/jpeg')
+	return app.send_static_file (filename)
 
 if __name__ == "__main__":
 	app.debug = True
