@@ -6,8 +6,8 @@ transformations = (standard_transformations + (implicit_multiplication_applicati
 import math
 
 
-from flask import Flask, render_template, json, request, send_file
-app = Flask(__name__)
+from flask import Flask, render_template, json, request, send_file, send_from_directory
+app = Flask(__name__, static_url_path = '')
 
 @app.route("/home")
 def main():
@@ -56,7 +56,8 @@ def step_evaluate_post():
 	
 	# return filename
 	# return send_file(filename, mimetype = 'image/jpeg')
-	return app.send_static_file (filename)
+	return render_template('template.html', filename = filename)
+
 
 if __name__ == "__main__":
 	app.debug = True
