@@ -55,8 +55,14 @@ def step_evaluate_post():
 		#return 'fail'
 	
 	# return filename
-	# return send_file(filename, mimetype = 'image/jpeg')
+	#return send_file(filename, mimetype = 'image/jpeg')
 	return render_template('template.html', filename = filename)
+
+
+@app.errorhandler(Exception)
+def unhandled_exception(e):
+	app.logger.error('Unhandled Exception: %s', (e))
+	return 'Invalid Input'
 
 
 if __name__ == "__main__":

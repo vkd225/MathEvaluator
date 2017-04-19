@@ -30,8 +30,8 @@ import math
 # print out 
 
 
-user_input = parse_expr('a+b', transformations = transformations)
-step_input = parse_expr('a', transformations = transformations)
+user_input = parse_expr('as', transformations = transformations)
+step_input = parse_expr('error', transformations = transformations)
 
 def check(user_input, step_input):
 	return (simplify (user_input - step_input) == 0)
