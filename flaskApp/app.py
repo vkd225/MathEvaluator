@@ -59,6 +59,13 @@ def step_evaluate_post():
 	return render_template('template.html', filename = filename)
 
 
+@app.route('/addquestion', methods = ['GET', 'POST'])
+def addQuestion():
+	return render_template('addQuestion.html')
+
+
+
+
 @app.errorhandler(Exception)
 def unhandled_exception(e):
 	app.logger.error('Unhandled Exception: %s', (e))
