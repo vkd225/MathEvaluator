@@ -42,11 +42,15 @@ def step_evaluate_post():
 
 	user_input = request.form['user_input']
 	user_input = parse_expr(user_input, transformations = transformations)
+	# print user_input
+
 	step_input = request.form['step_input']
 	step_input = parse_expr(step_input, transformations = transformations)
+	# print step_input
 
 	out = check(user_input, step_input)
-	
+	# print out
+
 	if (out == True):
 		filename = 'success.jpg'
 		# return 'Success'
