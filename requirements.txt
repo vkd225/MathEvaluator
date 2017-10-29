@@ -1,2 +1,2 @@
-sympy
-flask
+sympy==1.1.1
+flask==0.12.2
