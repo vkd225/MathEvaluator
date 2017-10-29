@@ -1,4 +1,4 @@
-#!/home/vikash/Desktop/MathEvaluator/Math/bin/python
+#!/home/shikhar/Desktop/PersonalProjects/MathEvaluator/Math/bin/python
 
 import sys
 import getopt
