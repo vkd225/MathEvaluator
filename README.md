@@ -13,5 +13,7 @@ python app.py
 ```
 
 ### Examples
+```
 Step Input = sin 0, User Input = 0 ==> Success
 Step Intput = 2+2 , User Input = 5 ==> Fail
+```
