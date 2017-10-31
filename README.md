@@ -9,7 +9,7 @@ pip install -r requirements.txt
 
 # Run local server
 cd flaskApp
-python app.py
+python main.py
 ```
 
 ### Examples
